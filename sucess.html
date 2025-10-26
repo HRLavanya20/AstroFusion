@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 0;
+      }
+      .success-container {
+        margin-top: 20%;
+      }
+      .success-message {
+        font-size: 24px;
+        color: #2d572c;
+        margin-bottom: 20px;
+      }
+      .redirect-message {
+        font-size: 18px;
+        color: #555;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success-container">
+      <div class="success-message">Action completed successfully!</div>
+      <div class="redirect-message">
+        You will be redirected shortly, or you can click the button below.
+      </div>
+      <a href="index.html" class="button">Go to Homepage</a>
+    </div>
+    <script>
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 5000);
+
+      // Example of adding additional JavaScript functionality
+      document.querySelector(".button").addEventListener("click", () => {
+        console.log("User clicked the button to go to the homepage.");
+      });
+    </script>
+  </body>
+</html>

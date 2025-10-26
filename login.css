@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(image.png);
+}
+
+.login-container {
+    background-color: #f7e4c4;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    align-items: normal;}
+h1{
+    text-align: center;
+    
+
+}
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #56af4c;
+    color: rgb(27, 25, 25);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4c4e4c00;
+}
+
+.collaboration-btn {
+    background-color: #007bff;
+}
+
+.collaboration-btn:hover {
+    background-color: #0056b3;
+}
+
+.confirm-page {
+    display: none;
+    text-align: center;
+    padding: 50px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+}
+.additional-information {
+    
+    padding: 200px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    justify-content: center;
+    line-height:normal;
+    background-image: url(imageE.png);
+}

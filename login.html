@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <h1>COLLABORATION</h1>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="return false;">
+        <input type="text" id="username" placeholder="Username" required />
+        <input
+          type="password"
+          id="newPassword"
+          placeholder="New Password"
+          required
+        />
+
+        <button
+          type="button"
+          class="collaboration-btn"
+          onclick="toggleCompanyList()"
+        >
+          Select Collaboration Company
+        </button>
+
+        <select id="companyList" style="display: none">
+          <option value="">Select Company</option>
+          <option value="Rocketmen Software">Rocketmen Software</option>
+          <option value="Galactic Colonies">Galactic Colonies</option>
+          <option value="Aerolite Bandits">Aerolite Bandits</option>
+          <option value="Space Yonder">Space Yonder</option>
+          <option value="Mission Impossible">Mission Impossible</option>
+          <option value="Protyposis Laboratory">Protyposis Laboratory</option>
+        </select>
+
+        <button type="button" onclick="login()">Login</button>
+      </form>
+      <div class="register-link">
+        <p>Don't have an account? <a href="sub.html">Create account</a></p>
+      </div>
+    </div>
+
+    <div class="confirm-page" id="confirmPage">
+      <h2>Login Successful</h2>
+      <p>Welcome to SPACECONNECT, <span id="confirmUsername"></span>!</p>
+      <p>You are logged in to <span id="confirmCompany"></span></p>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+  <body>
+    <div class="additional-information" id="additionalinformation">
+      <h2><i>BEFORE TO LOGIN GO THROUGH THIS</i></h2>
+      <button
+        type="button"
+        class="Rocketmen Software"
+        onclick="toggleCompanyList()"
+      >
+        Rocketmen Software
+        <li>
+          <a href="rocketman.html" class="active">click for more information</a>
+        </li>
+      </button>
+      <button
+        type="button"
+        class="Galactic Colonies"
+        onclick="toggleCompanyList()"
+      >
+        Galactic Colonies
+        <li>
+          <a href="Galactic Colonies.html" class="active"
+            >click for more information</a
+          >
+        </li>
+      </button>
+      <button
+        type="button"
+        class="Aerolite Bandits"
+        onclick="toggleCompanyList()"
+      >
+        Aerolite Bandits
+        <li>
+          <a href="Aerolite Bandits.html" class="active"
+            >click for more information</a
+          >
+        </li>
+      </button>
+      <button type="button" class="Space Yonder" onclick="toggleCompanyList()">
+        Space Yonder
+        <li>
+          <a href="Space yonder.html" class="active"
+            >click for more information</a
+          >
+        </li>
+      </button>
+      <button
+        type="button"
+        class="Mission Impossible"
+        onclick="toggleCompanyList()"
+      >
+        Mission Impossible
+        <li>
+          <a href="Mission Impossible.html" class="active"
+            >click for more information</a
+          >
+        </li>
+      </button>
+      <button
+        type="button"
+        class="Protyposis Laboratory"
+        onclick="toggleCompanyList()"
+      >
+        Protyposis Laboratory
+        <li>
+          <a href="Protyposislaboratory.html" class="active"
+            >click for more information</a
+          >
+        </li>
+      </button>
+    </div>
+  </body>
+</html>

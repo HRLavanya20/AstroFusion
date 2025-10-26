@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Connect</title>
+    <style>
+      body {
+        background-color: beige;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .title {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 36px; /* Increase the font size */
+        color: sepia;
+        margin-left: 10px;
+      }
+
+      .logo {
+        margin-right: 10px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        grid-gap: 20px;
+        justify-content: center;
+        margin: 20px;
+      }
+
+      .box {
+        width: 250px;
+        height: 250px;
+        border: 4px solid #d1b2a1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: white;
+      }
+
+      .box img {
+        max-width: 90%;
+        max-height: 80%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .box-name {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        text-align: left;
+        color: black;
+        font-size: 14px;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+
+      .collaborate-btn {
+        display: block;
+        width: 150px;
+        height: 42px;
+        background-color: #6a0dad;
+        color: white;
+        text-align: center;
+        line-height: 42px;
+        border-radius: 5px;
+        margin: 30px auto;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .collaborate-btn:hover {
+        background-color: #580c91;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">SpaceConnect</div>
+      <div class="logo">
+        <a href="main logo.png" target="_blank"
+          ><img src="main logo.png" alt="Logo"
+        /></a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="box" onclick="showModal('modal1')">
+        <a href="b1.jpg" target="_blank"
+          ><img src="b1.jpg" alt="Rocketmen Software"
+        /></a>
+        <div class="box-name">Rocketmen<br />Software</div>
+      </div>
+
+      <div class="box" onclick="showModal('modal2')">
+        <a href="b2.png" target="_blank"
+          ><img src="b2.png" alt="Galactic Colonies"
+        /></a>
+        <div class="box-name">Galactic<br />Colonies</div>
+      </div>
+
+      <div class="box" onclick="showModal('modal3')">
+        <a href="b3.png" target="_blank"
+          ><img src="b3.png" alt="Aerolite Bandits"
+        /></a>
+        <div class="box-name">Aerolite<br />Bandits</div>
+      </div>
+
+      <div class="box" onclick="showModal('modal4')">
+        <a href="b4.png" target="_blank"
+          ><img src="b4.png" alt="Space Yonder"
+        /></a>
+        <div class="box-name">Space<br />Yonder</div>
+      </div>
+
+      <div class="box" onclick="showModal('modal5')">
+        <a href="b5.png" target="_blank"
+          ><img src="b5.png" alt="Mission Impossible"
+        /></a>
+        <div class="box-name">Mission<br />Impossible</div>
+      </div>
+
+      <div class="box" onclick="showModal('modal6')">
+        <a href="b6.png" target="_blank"
+          ><img src="b6.png" alt="Protyposis Laboratory"
+        /></a>
+        <div class="box-name">Protyposis<br />Laboratory</div>
+      </div>
+    </div>
+
+    <a href="login.html" class="collaborate-btn">Collaborate</a>
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal1')">
+          &times;
+        </button>
+        <h2>Rocketmen Software</h2>
+        <p>
+          Rocketmen Software is a leading company in aerospace
+          technology,Rocketmen Software, established in 2017 and headquartered
+          in Cedar Park, Texas, is an end-to-end space transportation company
+          dedicated to providing economical and convenient access to space.
+          Their offerings include small to medium-lift launch vehicles, lunar
+          landers, and orbital vehicles, catering to both government and
+          commercial clients. FIREFLY SPACE In November 2024, Rocketmen Software
+          secured a $175 million Series D funding round led by RPM Ventures,
+          elevating the company's valuation to over $2 billion. This investment
+          aims to enhance the market reach of their Elytra spacecraft,
+          transition to full-scale production of the Alpha rocket, and expedite
+          hardware qualification for new vehicles. REUTERS Rocketmen Software's
+          network encompasses collaborations with prominent aerospace entities.
+          Notably, they have partnered with Northrop Grumman to develop the
+          Antares rocket's new 300-series first stage, which is similar to
+          Rocketmen Software's in-development MLV launch vehicle. This
+          collaboration is expected to substantially increase the mass
+          capability of Antares. WIKIPEDIA The company is also preparing for its
+          inaugural lunar mission, "Blue Ghost," as part of NASA's Commercial
+          Lunar Payload Services initiative. This mission underscores Rocketmen
+          Software's commitment to advancing lunar exploration technologies.
+          REUTERS With a robust financial foundation and strategic partnerships,
+          Rocketmen Software is well-positioned to play a significant role in
+          the evolving space industry, offering comprehensive solutions for
+          space access and operations
+        </p>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal2')">
+          &times;
+        </button>
+        <h2>Galactic Colonies</h2>
+        <p>
+          Galactic Colonies focuses on building futuristic human habitats in
+          space,A cutting-edge space technology startup, founded in the late
+          2010s, is revolutionizing the aerospace industry with a focus on small
+          satellite launch solutions. Their primary offering is a line of
+          cost-effective, customizable launch vehicles designed to serve the
+          growing demand for low Earth orbit (LEO) missions. These rockets are
+          built using advanced materials and modular designs, allowing quick
+          adaptation to different payload configurations. The company’s network
+          includes partnerships with global satellite manufacturers, space
+          agencies, and private firms. They collaborate with organizations that
+          specialize in satellite deployment, propulsion systems, and data
+          analytics. Their integration with space station resupply missions and
+          collaborations with international space agencies further bolster their
+          credibility. Financially, the startup has demonstrated remarkable
+          growth. Recently, they secured over $100 million in a Series B funding
+          round, backed by prominent venture capital firms and industry
+          veterans. The funds are directed toward scaling production, developing
+          next-generation propulsion systems, and expanding their launch
+          facilities. Their valuation now exceeds $1 billion, placing them among
+          the elite “unicorn” startups in the aerospace sector. The company is
+          also pioneering eco-friendly propulsion technologies, emphasizing
+          sustainability in space exploration. Their focus on reducing carbon
+          emissions during launches and utilizing renewable materials aligns
+          with global environmental goals. By streamlining access to space, this
+          startup is enabling industries like telecommunications, Earth
+          observation, and climate monitoring to expand their operations. Their
+          innovative approach, strong financial backing, and strategic alliances
+          position them as a leader in the rapidly evolving space technology
+          market.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal3')">
+          &times;
+        </button>
+        <h2>Aerolite Bandits</h2>
+        <p>
+          Aerolite Bandits are known for their high-speed space missions,A
+          rising space technology startup, established in the early 2020s,
+          specializes in building high-resolution Earth observation satellites.
+          These compact, cost-efficient satellites use advanced hyperspectral
+          imaging technology to monitor critical global concerns such as
+          agriculture, urban development, and environmental sustainability. By
+          providing detailed imagery across multiple spectral bands, their
+          satellites enable precise analysis of land and water resources. The
+          startup has a robust network of collaborations with agricultural
+          companies, environmental organizations, and government agencies. They
+          are also part of a global consortium that leverages space data for
+          disaster management and urban planning, further enhancing their reach
+          and impact. Financially, the company recently closed a $50 million
+          Series A funding round, led by leading venture capital firms and
+          strategic partners in the aerospace industry. The funding supports the
+          deployment of their satellite constellation, expansion of data
+          analytics capabilities, and scaling of operations to serve a global
+          client base. With a strong commitment to sustainability, the company
+          integrates green technologies in satellite production and adheres to
+          international guidelines for reducing space debris. Their innovative
+          solutions are unlocking new possibilities in precision agriculture,
+          climate science, and disaster response, making them a key player in
+          the rapidly growing field of Earth observation technology.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal4')">
+          &times;
+        </button>
+        <h2>Space Yonder</h2>
+        <p>
+          Space Yonder is a visionary company exploring the outer realms of the
+          galaxy,A dynamic space technology startup, founded in the mid-2010s,
+          is making waves in the aerospace sector by focusing on developing
+          advanced propulsion systems for small and medium-sized satellites.
+          Their cutting-edge electric propulsion technology offers high
+          efficiency and significantly extends satellite lifespans while
+          reducing operational costs. This innovation addresses the growing
+          demand for affordable and sustainable solutions in the satellite
+          industry. The startup has built an extensive network of partnerships
+          with satellite manufacturers, telecommunications providers, and
+          academic institutions. These collaborations enable them to integrate
+          their propulsion systems into a wide range of satellite platforms and
+          mission profiles. They also maintain strategic alliances with space
+          agencies, contributing to government-led space exploration and defense
+          projects. Financially, the company has secured multiple funding
+          rounds, with a total investment exceeding $80 million. This backing
+          comes from a mix of venture capital firms, aerospace-focused
+          investors, and government grants. The funds are directed toward
+          scaling production, enhancing research and development, and expanding
+          their international footprint. In addition to propulsion systems, the
+          startup is exploring technologies for in-orbit servicing, such as
+          satellite refueling and debris removal. Their focus on innovation,
+          sustainability, and global collaboration positions them as a pivotal
+          player in the transformation of satellite operations and space
+          exploration.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal5')">
+          &times;
+        </button>
+        <h2>Mission Impossible</h2>
+        <p>
+          Mission Impossible is a daring company with missions that push the
+          limits of space exploration,A promising space technology startup,
+          established in the late 2010s, focuses on designing and deploying
+          small satellite constellations for real-time Earth imaging and
+          analytics. Their satellites capture high-resolution imagery with rapid
+          revisit times, offering critical data for industries like agriculture,
+          urban planning, and disaster management. Using AI-driven analytics,
+          the company provides actionable insights from satellite data, enabling
+          precise monitoring and decision-making. The startup has forged a
+          strong network with government space agencies, private companies, and
+          research organizations. Their collaborations include joint research
+          projects on climate monitoring and partnerships with global tech firms
+          to integrate satellite data into existing platforms. These
+          partnerships enhance their technological edge and broaden their market
+          reach. On the financial front, the company has raised over $100
+          million in funding across several rounds. Backed by prominent venture
+          capital firms and strategic investors, they use the capital to expand
+          their satellite fleet, improve data processing capabilities, and scale
+          their global operations. Their services are gaining traction,
+          particularly in emerging markets where satellite data is critical for
+          infrastructure development and resource management. With a commitment
+          to innovation and accessibility, the startup is democratizing space
+          data. Their solutions are transforming how industries leverage
+          satellite imagery, cementing their role as a leader in space-based
+          analytics.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('modal6')">
+          &times;
+        </button>
+        <h2>Protyposis Laboratory</h2>
+        <p>
+          Protyposis Laboratory specializes in research and development for
+          advanced space technologies,A fast-growing space technology startup,
+          founded in the early 2020s, focuses on developing reusable launch
+          vehicles designed to reduce the cost of access to space. Their
+          flagship product is a small to medium-lift rocket that is designed to
+          be launched multiple times, similar to larger, established companies
+          in the industry. This innovation has the potential to significantly
+          lower the cost of launching satellites, enabling more frequent and
+          affordable space missions. The company has established a solid
+          network, including partnerships with commercial satellite operators,
+          space exploration agencies, and aerospace contractors. They have been
+          selected for several government contracts, further expanding their
+          reputation in the industry. The startup is also working closely with
+          universities and research institutions to advance propulsion
+          technologies and spacecraft design. Financially, the company has
+          raised approximately $75 million in seed and Series A funding,
+          primarily from venture capital firms with a focus on aerospace and
+          technology investments. The funds are directed toward refining their
+          rocket technology, building launch infrastructure, and expanding their
+          team of engineers and scientists. The company is committed to
+          sustainability, integrating environmentally friendly technologies into
+          their rocket designs to minimize carbon emissions. Their focus on
+          reusability and efficiency positions them to play a significant role
+          in making space more accessible to a broader range of customers and
+          industries.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function showModal(id) {
+        document.getElementById(id).style.display = "flex";
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    </script>
+  </body>
+</html>

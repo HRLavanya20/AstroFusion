@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="deatils.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2 class="form-title">User Information Form</h2>
+      <form
+        id="userForm"
+        action="#"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <!-- Company -->
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" required />
+        </div>
+        <!-- Role -->
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" id="role" name="role" required />
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <!-- Contact -->
+        <div class="form-group">
+          <label for="contact">Contact</label>
+          <input type="tel" id="contact" name="contact" required />
+        </div>
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <!-- Office Address -->
+        <div class="form-group">
+          <label for="office_address">Office Address</label>
+          <textarea
+            id="office_address"
+            name="office_address"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <!-- Working Certificate -->
+        <div class="form-group">
+          <label for="working_certificate">Working Certificate</label>
+          <input
+            type="file"
+            id="working_certificate"
+            name="working_certificate"
+            accept=".pdf,.jpg,.png"
+            required
+          />
+        </div>
+        <!-- LinkedIn URL -->
+        <div class="form-group">
+          <label for="linkedin_url">LinkedIn URL</label>
+          <input type="url" id="linkedin_url" name="linkedin_url" required />
+        </div>
+        <!-- GitHub URL -->
+
+        <!-- License of Company -->
+        <div class="form-group">
+          <label for="license">License of Company</label>
+          <input
+            type="file"
+            id="license"
+            name="license"
+            accept=".pdf,.jpg,.png"
+            required
+          />
+        </div>
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Quiz</title>
+    <link rel="stylesheet" href="stylez.css" />
+  </head>
+  <body>
+    <!-- Start Button -->
+    <div id="start-box">
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Box (hidden initially) -->
+    <div id="quiz-box" style="display: none">
+      <h2 id="question">Question will appear here</h2>
+      <div id="options"></div>
+      <button id="next-btn" style="display: none">Next</button>
+    </div>
+
+    <!-- Result Box (hidden initially) -->
+    <div id="result-box" style="display: none">
+      <h2>Quiz Completed!</h2>
+      <p class="score-summary">
+        You scored <strong id="score">0</strong> out of
+        <strong id="total-questions">0</strong>!
+      </p>
+      <p id="feedback"></p>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Yonder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 5px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('space-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 50px;
+            font-weight: 300;
+            animation: fadeIn 3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .section {
+    padding: 20px 10%; /* Reduced from 60px to 40px */
+    text-align: center;
+    margin-bottom: 10px; /* Add a margin-bottom to fine-tune spacing */
+}
+.section p {
+        text-align: center; /* Center-align the paragraphs in all sections */
+    }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background: #ff9800;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#vision">Vision</a>
+            <a href="#vision">Mission</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#unique">Why We Are Unique</a>
+            <a href="#society">Impact on Society</a>
+            <a href="#collaboration">Collaborate With Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Space Yonder</h1>
+        <p> Your Adventure Beyond the Earth...</p>
+    </div>
+    <div class="section" id="about">
+        <h2>ABOUT SPACE YONDER</h2>
+        <p>Space Yonder is dedicated to making interstellar tourism a reality. Our mission is to create safe, thrilling, and comfortable travel experiences for civilians, taking them beyond the Earth's atmosphere. By combining state-of-the-art technology with exceptional customer service, we aim to bring space travel to the masses.</p>
+    </div>
+    <div class="section" id="vision">
+        <h2>OUR VISION</h2>
+        <p>To make interstellar tourism a reality by bridging the gap between space exploration and personal adventure.</p>
+    </div>
+    <div class="section" id="Mission">
+        <h2>OUR MISSION</h2>
+        <p>Develop safe, comfortable, and thrilling travel experiences beyond Earth's atmosphere, providing an affordable gateway to space for everyday adventurers.</p>
+    </div>
+    <div class="section" id="achievements">
+        <h2>OUR ACHIEVEMENTS</h2>
+        <p>The design of a next-generation spacecraft capable of safely carrying passengers on suborbital flights marks a groundbreaking achievement in aerospace engineering. This advanced vehicle blends cutting-edge technology with meticulous attention to safety, ensuring a reliable and exhilarating journey for its passengers. Building on this innovation, a successful space tourism pilot program was launched, offering VIP customers an unparalleled opportunity to experience weightlessness firsthand. This program not only captured public imagination but also demonstrated the feasibility and appeal of civilian space travel. Additionally, the initiative secured substantial funding to construct the world’s first commercial orbital hotel, paving the way for a new era of luxury experiences beyond Earth's atmosphere. Alongside these achievements, industry-leading safety protocols were established, setting new standards for civilian space travel. These measures underscore a commitment to prioritizing passenger well-being while fostering trust and confidence in the emerging space tourism industry. Together, these milestones represent a significant leap forward in making space accessible to all.</p>
+    </div>
+    <div class="section" id="unique">
+        <h2>WHY WE ARE UNIQUE</h2>
+        <p>Space Yonder provides civilians the chance to experience space travel firsthand. By prioritizing safety, comfort, and affordability, we make space tourism accessible to a wider audience, opening up the cosmos to non-professional space travelers. We focus on pushing the boundaries of space technology through pioneering advancements in mission control systems, interplanetary communication, and AI-driven autonomy.</p>
+    </div>
+    <div class="section" id="society">
+        <h2>IMPACT ON SOCIETY</h2>
+        <p>Our contributions extend beyond the stars. By enabling faster, safer, and more efficient space missions, we inspire innovation on Earth—driving advancements in communication, navigation, and resource management.Our work in space tourism will inspire new generations of explorers and scientists, while making space travel more accessible and creating new opportunities in the tourism, entertainment, and aerospace industries.</p>
+    </div>
+    <div class="section" id="collaboration">
+        <h2>WHY COLLABORATE WITH US?</h2>
+        <p>We are dedicated to creating exceptional space tourism experiences that prioritize customer satisfaction and redefine the way people perceive space travel. Our approach focuses on ensuring every journey is not just a trip but an unforgettable adventure that caters to the unique needs and desires of our customers. 
+
+            With a commitment to technological leadership, we continuously innovate to stay at the forefront of the space tourism industry. Our cutting-edge spacecraft and meticulously designed protocols ensure not only the highest standards of safety and reliability but also deliver an unparalleled travel experience. 
+            
+            Guided by an innovative vision, we strive to make space travel accessible and achievable for civilians, turning what once was a dream into an extraordinary reality. By combining advanced technology, rigorous planning, and a passion for exploration, we invite you to join us in pioneering this new frontier of human endeavor.
+            
+            The growing space tourism market presents a remarkable opportunity to be part of a transformative era. Our groundbreaking programs enable individuals to tap into this dynamic industry and be among the first to experience and contribute to the next chapter of space exploration. Together, we can push the boundaries of human potential and redefine the possibilities of travel and adventure.</p>
+    </div>
+    <div class="section" id="contact">
+        <h2>CONTACT US</h2>
+        <p>For inquiries and collaborations, reach out to us.</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="tel" placeholder="Phone Number">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your Query"></textarea>
+            <button>Send</button>
+        </div>
+        <p>Email: contact@spaceyonder.com</p>
+        <p>Phone: +91 8759499399</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </div>
+</body>
+</html>
+

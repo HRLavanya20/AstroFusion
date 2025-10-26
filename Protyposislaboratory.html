@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protyposis Laboratory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 5px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('space-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 50px;
+            font-weight: 300;
+            animation: fadeIn 3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .section {
+    padding: 20px 10%; /* Reduced from 60px to 40px */
+    text-align: center;
+    margin-bottom: 10px; /* Add a margin-bottom to fine-tune spacing */
+}
+.section p {
+        text-align: center; /* Center-align the paragraphs in all sections */
+    }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background: #ff9800;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#vision">Vision</a>
+            <a href="#vision">Mission</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#unique">Why We Are Unique</a>
+            <a href="#society">Impact on Society</a>
+            <a href="#collaboration">Collaborate With Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Space Yonder</h1>
+        <p> Innovating for the Stars with the Legacy of moon...</p>
+    </div>
+    <div class="section" id="about">
+        <h2>ABOUT Protyposis Laboratory</h2>
+        <p>Protyposis Laboratory leads in the research and development of breakthrough technologies for interstellar use. Our work is focused on exploring new materials, energy sources, and systems to support humanity’s journey into the stars. We push the boundaries of science to provide the foundational technologies needed for future space missions.</p>
+    </div>
+    <div class="section" id="vision">
+        <h2>OUR VISION</h2>
+        <p>To make interstellar tourism a reality by bridging the gap between space exploration and personal adventure,To lead in the research and development of breakthrough technologies that will enable humanity’s journey into the stars..</p>
+    </div>
+    <div class="section" id="Mission">
+        <h2>OUR MISSION</h2>
+        <p>Explore new materials, energy sources, and systems that support space travel, focusing on durability, sustainability, and scalability for interstellar missions.</p>
+    </div>
+    <div class="section" id="achievements">
+        <h2>OUR ACHIEVEMENTS</h2>
+        <p>In recent advancements, significant progress has been made in the development of radiation-resistant materials specifically designed for spacecraft, greatly enhancing their durability and operational lifespans in harsh space environments. These innovative materials offer increased protection against cosmic radiation, thereby reducing wear and extending the functional period of spacecraft during long-term missions. Additionally, a highly efficient energy conversion system has been created, capable of harnessing solar energy even in the low-light conditions of deep space. This breakthrough technology ensures a reliable power supply for space missions operating far from the Sun, addressing one of the critical challenges of deep-space exploration. Complementing these efforts, ten new technologies have been patented with the aim of improving the efficiency and sustainability of space habitats by 2035. These technologies are focused on optimizing resource utilization, energy efficiency, and structural integrity, paving the way for more sustainable long-term habitation in space. Furthermore, a groundbreaking collaboration has been established with international space agencies, enabling the sharing of research data on advanced materials for long-duration space missions. This partnership fosters global cooperation and accelerates the development of solutions to challenges faced in interplanetary exploration and settlement. Together, these initiatives mark a transformative leap in the field of space technology and exploration.</p>
+    </div>
+    <div class="section" id="unique">
+        <h2>WHY WE ARE UNIQUE</h2>
+        <p>Protyposis Laboratory specializes in laying the scientific foundation for the future of space exploration. Our research and development focus on materials, energy, and systems that will allow humanity to thrive beyond Earth.</p>
+    </div>
+    <div class="section" id="society">
+        <h2>IMPACT ON SOCIETY</h2>
+        <p>Our contributions extend beyond the stars. By enabling faster, safer, and more efficient space missions, we inspire innovation on Earth—driving advancements in communication, navigation, and resource management.Our innovations have the potential to revolutionize not only space travel but also industries on Earth by providing new materials for use in construction, energy production, and environmental sustainability.</p>
+    </div>
+    <div class="section" id="collaboration">
+        <h2>WHY COLLABORATE WITH US?</h2>
+        <p>Cutting-edge research is at the heart of our mission, laying the groundwork for the future of space exploration. By delving into foundational science, we aim to unlock the mysteries of the cosmos and develop the knowledge necessary to push the boundaries of what is possible. Our efforts are driven by a commitment to innovation, as evidenced by our patented technologies that have the potential to revolutionize the space industry. These breakthroughs not only address current challenges but also pave the way for transformative advancements that could redefine how humanity interacts with space.
+
+            Collaboration is a cornerstone of our approach, fostering partnerships with leading researchers, institutions, and organizations. Together, we tackle some of the most significant challenges in space exploration, combining expertise and resources to achieve remarkable outcomes. Our work is guided by a long-term vision that envisions humanity expanding its reach into the stars. By contributing to this extraordinary journey, we aspire to inspire future generations and play a pivotal role in humanity’s quest to explore and inhabit the universe.</p>
+    </div>
+    <div class="section" id="contact">
+        <h2>CONTACT US</h2>
+        <p>For inquiries and collaborations, reach out to us.</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="tel" placeholder="Phone Number">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your Query"></textarea>
+            <button>Send</button>
+        </div>
+        <p>Email: 
+            contact@protyposislab.com
+            </p>
+        <p>Phone: +91 8759499399</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </div>
+</body>
+</html>
+

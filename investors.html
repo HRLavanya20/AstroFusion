@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Opportunities</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, darkblue, purple);
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .rectangle {
+            background-color: white;
+            color: black;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .rectangle:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+        .modal-content h2 {
+            margin-top: 0;
+        }
+        .modal-content strong {
+            font-weight: bold;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle" onclick="openModal('company1')">ABC Ventures</div>
+        <div class="rectangle" onclick="openModal('company2')">XYZ Investments</div>
+        <div class="rectangle" onclick="openModal('company3')">Innovate Capital</div>
+        <div class="rectangle" onclick="openModal('company4')">Vision Partners</div>
+        <div class="rectangle" onclick="openModal('company5')">NextGen Investors</div>
+        <div class="rectangle" onclick="openModal('company6')">FutureScope Capital</div>
+        <div class="rectangle" onclick="openModal('company7')">Pioneer Ventures</div>
+        <div class="rectangle" onclick="openModal('company8')">Elevate Partners</div>
+        <div class="rectangle" onclick="openModal('company9')">Catalyst Funds</div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalText = document.getElementById('modal-text');
+
+        const companyDetails = {
+            company1: `
+                <h2>ABC Ventures</h2>
+                <p><strong>Tagline:</strong> Empowering Visionary Entrepreneurs.</p>
+                <p><strong>About Us:</strong> ABC Ventures focuses on investing in innovative and scalable startups in sectors like technology, healthcare, and sustainability.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Technology, Healthcare, FinTech, Clean Energy.</li>
+                    <li>Stage of Business: Seed, Series A, Growth Stage.</li>
+                    <li>Investment Size: Up to ₹5 Crore.</li>
+                    <li>Key Factors We Look For: Strong leadership, market potential, scalability, and product-market fit.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Include details about the problem, solution, market, and financials.</li>
+                    <li>Eligibility: Minimum revenue or product in the market.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: invest@abcventures.com</li>
+                </ul>
+                </p>
+            `,
+            company2: `
+                <h2>XYZ Investments</h2>
+                <p><strong>Tagline:</strong> Your Growth Partners.</p>
+                <p><strong>About Us:</strong> XYZ Investments specializes in funding early-stage startups with unique ideas and strong market potential.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: E-commerce, Education Technology, Green Energy.</li>
+                    <li>Stage of Business: Series A, Series B.</li>
+                    <li>Investment Size: ₹1 Crore - ₹10 Crore.</li>
+                    <li>Key Factors We Look For: Strong leadership, market potential, scalability, and product-market fit.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Include details about the problem, solution, market, and financials.</li>
+                    <li>Eligibility: Minimum revenue or product in the market.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: invest@xyzinvestments.com</li>
+                </ul>
+                </p>
+            `,
+            company3: `
+                <h2>Innovate Capital</h2>
+                <p><strong>Tagline:</strong> Driving Innovation Forward.</p>
+                <p><strong>About Us:</strong> Innovate Capital is committed to fostering innovation in AI, Robotics, and Biotechnology sectors.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: AI, Robotics, Biotechnology.</li>
+                    <li>Stage of Business: Seed, Growth Stage.</li>
+                    <li>Investment Size: ₹2 Crore - ₹8 Crore.</li>
+                    <li>Key Factors We Look For: Strong leadership, market potential, scalability, and product-market fit.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Include details about the problem, solution, market, and financials.</li>
+                    <li>Eligibility: Minimum revenue or product in the market.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: invest@innovatecapital.com</li>
+                </ul>
+                </p>
+            `,
+            company4: `
+                <h2>Vision Partners</h2>
+                <p><strong>Tagline:</strong> Transforming Ideas into Reality.</p>
+                <p><strong>About Us:</strong> Vision Partners invests in startups with sustainable and impactful solutions.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Renewable Energy, Social Enterprises.</li>
+                    <li>Stage of Business: Series A, Series B.</li>
+                    <li>Investment Size: ₹3 Crore - ₹15 Crore.</li>
+                    <li>Key Factors We Look For: Strong leadership, market potential, scalability, and product-market fit.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Include details about the problem, solution, market, and financials.</li>
+                    <li>Eligibility: Minimum revenue or product in the market.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: invest@visionpartners.com</li>
+                </ul>
+                </p>
+            `,
+            company5: `
+                <h2>NextGen Investors</h2>
+                <p><strong>Tagline:</strong> Shaping Tomorrow's Innovations.</p>
+                <p><strong>About Us:</strong> NextGen Investors support startups focused on advanced technologies and sustainability goals.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Advanced Tech, Green Technology, Renewable Energy.</li>
+                    <li>Stage of Business: Early Stage, Growth Stage.</li>
+                    <li>Investment Size: ₹3 Crore - ₹12 Crore.</li>
+                    <li>Key Factors We Look For: Visionary founders, innovative ideas, and strong execution plans.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Include vision, product strategy, and growth potential.</li>
+                    <li>Eligibility: Must align with sustainable development goals.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: contact@nextgeninvestors.com</li>
+                </ul>
+                </p>
+            `,
+            company6: `
+                <h2>FutureScope Capital</h2>
+                <p><strong>Tagline:</strong> Envisioning the Future of Business.</p>
+                <p><strong>About Us:</strong> FutureScope Capital invests in promising startups across multiple sectors, emphasizing scalability and social impact.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Technology, Social Impact Ventures.</li>
+                    <li>Stage of Business: Pre-Series A, Series A.</li>
+                    <li>Investment Size: ₹1 Crore - ₹6 Crore.</li>
+                    <li>Key Factors We Look For: Market potential, innovative business models, and clear growth plans.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Must showcase market analysis, product differentiation, and financial forecast.</li>
+                    <li>Eligibility: Startups with a clear value proposition.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: info@futurescopecapital.com</li>
+                </ul>
+                </p>
+            `,
+            company7: `
+                <h2>Pioneer Ventures</h2>
+                <p><strong>Tagline:</strong> Building Bridges to Success.</p>
+                <p><strong>About Us:</strong> Pioneer Ventures empowers new-age startups with strategic guidance and funding.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Healthcare Tech, EdTech, FinTech.</li>
+                    <li>Stage of Business: Seed Stage, Series A.</li>
+                    <li>Investment Size: ₹1.5 Crore - ₹7 Crore.</li>
+                    <li>Key Factors We Look For: Disruptive innovation, product viability, and customer acquisition strategy.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Emphasize unique selling proposition and scalability potential.</li>
+                    <li>Eligibility: Minimum viable product ready.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: connect@pioneerventures.com</li>
+                </ul>
+                </p>
+            `,
+            company8: `
+                <h2>Elevate Partners</h2>
+                <p><strong>Tagline:</strong> Partnering for Unstoppable Growth.</p>
+                <p><strong>About Us:</strong> Elevate Partners focus on accelerating growth for high-potential startups in emerging markets.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: Logistics, E-commerce, AI Solutions.</li>
+                    <li>Stage of Business: Series B, Growth Stage.</li>
+                    <li>Investment Size: ₹4 Crore - ₹20 Crore.</li>
+                    <li>Key Factors We Look For: Strong teams, scalable operations, and innovative solutions.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Showcase operational efficiency and long-term vision.</li>
+                    <li>Eligibility: Proven revenue traction.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: elevate@elevatepartners.com</li>
+                </ul>
+                </p>
+            `,
+            company9: `
+                <h2>Catalyst Funds</h2>
+                <p><strong>Tagline:</strong> Igniting Growth, One Idea at a Time.</p>
+                <p><strong>About Us:</strong> Catalyst Funds invest in dynamic startups with the potential to transform industries.</p>
+                <p><strong>Investment Criteria:</strong>
+                <ul>
+                    <li>Sectors of Interest: AI, Renewable Energy, Consumer Products.</li>
+                    <li>Stage of Business: Early Growth, Series A.</li>
+                    <li>Investment Size: ₹2 Crore - ₹10 Crore.</li>
+                    <li>Key Factors We Look For: Vision, market fit, and operational excellence.</li>
+                </ul>
+                </p>
+                <p><strong>How to Apply for Investment:</strong>
+                <ul>
+                    <li>Pitch Deck Requirements: Detailed insights into the market opportunity and differentiation.</li>
+                    <li>Eligibility: Established customer base or strategic partnerships.</li>
+                </ul>
+                </p>
+                <p><strong>Contact Section:</strong>
+                <ul>
+                    <li>Contact Email: ignite@catalystfunds.com</li>
+                </ul>
+                </p>
+            `
+        };
+
+        function openModal(company) {
+            modal.style.display = 'flex';
+            modalText.innerHTML = companyDetails[company];
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalText.innerHTML = '';
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
